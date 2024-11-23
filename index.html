@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
+    <title>Canjea tu buelna</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -94,10 +94,47 @@
             font-weight: bolder;
             font-style: normal;
         }
+
+        @keyframes bounceInUp {
+            from,
+            60%,
+            75%,
+            90%,
+            to {
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+
+            from {
+                opacity: 0;
+                transform: translate3d(0, 3000px, 0) scaleY(5);
+            }
+
+            60% {
+                opacity: 1;
+                transform: translate3d(0, -20px, 0) scaleY(0.9);
+            }
+
+            75% {
+                transform: translate3d(0, 10px, 0) scaleY(0.95);
+            }
+
+            90% {
+                transform: translate3d(0, -5px, 0) scaleY(0.985);
+            }
+
+            to {
+                transform: translate3d(0, 0, 0);
+            }
+            }
+
+        .bounceInUp {
+            animation-name: bounceInUp;
+            animation-duration: 1s;
+         }
     </style>
   </head>
 
-    <body class="nunito-regular">
+    <body class="nunito-regular bounceInUp">
         <header class="header">
             <p class="nunito-bold">¡ CANJEA TU PREMIO !</p>
         </header>
@@ -127,7 +164,7 @@
         btnCanjearCodigo.addEventListener("click", () => {
 
             if(inputCodigo.value == "AUL18C03D1") {
-                const url = "https://wa.me/6692665010?text=Holaa%20carlos,%20¿te%20gustaría%20acompañarme%20a%20ver%20el%20atardecer,%20aceptas?";
+                const url = "https://wa.me/6699129120?text=Holaa%20carlos,%20¿te%20gustaría%20acompañarme%20a%20ver%20el%20atardecer,%20aceptas?";
                 window.location.href = url;
             }
 
